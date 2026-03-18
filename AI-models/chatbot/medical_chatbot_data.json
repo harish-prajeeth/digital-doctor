@@ -1,0 +1,57 @@
+[
+  {
+    "tag": "greeting",
+    "patterns": ["hello", "hi", "hey", "good morning", "good evening", "is anyone there?", "hola"],
+    "responses": ["Hello! I am your AI Medical Assistant. How can I help you today?"]
+  },
+  {
+    "tag": "goodbye",
+    "patterns": ["bye", "goodbye", "see you later", "exit", "quit", "that's all"],
+    "responses": ["Goodbye! Stay healthy! Feel free to return if you have more medical questions."]
+  },
+  {
+    "tag": "thanks",
+    "patterns": ["thanks", "thank you", "appreciate it", "helpful"],
+    "responses": ["You're very welcome!", "Glad I could help. Stay healthy!"]
+  },
+  {
+    "tag": "diabetes",
+    "patterns": ["diabetes", "what are the symptoms of diabetes", "do I have diabetes", "high blood sugar", "sugar disease"],
+    "responses": ["Common symptoms of diabetes include increased thirst, frequent urination, extreme hunger, unexplained weight loss, fatigue, irritability, blurred vision, and slow-healing sores. If you suspect diabetes, please consult a doctor for a blood test."]
+  },
+  {
+    "tag": "fever",
+    "patterns": ["fever", "high temperature", "I feel hot", "do I have a fever"],
+    "responses": ["A fever is a temporary increase in your body temperature. If your fever is 103°F (39.4°C) or higher, or lasts more than three days, you should consult a doctor. Stay hydrated and rest."]
+  },
+  {
+    "tag": "headache",
+    "patterns": ["headache", "migraine", "my head hurts", "throbbing pain in head"],
+    "responses": ["Headaches can be caused by dehydration, stress, lack of sleep, or poor diet. Try drinking water and resting in a quiet, dark room. If severe, sudden, or persistent, see a doctor immediately."]
+  },
+  {
+    "tag": "hypertension",
+    "patterns": ["blood pressure", "high blood pressure", "hypertension", "what is normal blood pressure"],
+    "responses": ["Normal blood pressure is typically around 120/80 mmHg. High blood pressure (hypertension) often has no symptoms, so regular checkups are important. It can increase the risk of heart disease and stroke."]
+  },
+  {
+    "tag": "covid",
+    "patterns": ["covid", "coronavirus", "covid-19 symptoms", "loss of taste", "loss of smell"],
+    "responses": ["Common COVID-19 symptoms include fever, dry cough, fatigue, loss of taste or smell, and shortness of breath. If you have severe symptoms like difficulty breathing, seek immediate medical attention."]
+  },
+  {
+    "tag": "asthma",
+    "patterns": ["asthma", "wheezing", "shortness of breath", "tight chest", "difficulty breathing"],
+    "responses": ["Asthma symptoms include shortness of breath, chest tightness or pain, wheezing when exhaling, and trouble sleeping caused by shortness of breath. Use your inhaler as prescribed or seek emergency care if an attack is severe."]
+  },
+  {
+    "tag": "stomach_ache",
+    "patterns": ["stomach ache", "belly pain", "abdominal pain", "tummy ache"],
+    "responses": ["Stomach aches can be caused by indigestion, gas, food poisoning, or stress. Drink plenty of clear liquids. If the pain is severe, accompanied by persistent vomiting or fever, consult a healthcare provider."]
+  },
+  {
+    "tag": "cold_flu",
+    "patterns": ["cold", "flu", "runny nose", "sore throat", "sneezing"],
+    "responses": ["The common cold or flu often presents with a runny or stuffy nose, sore throat, cough, congestion, slight body aches, or a mild headache. Rest, drink plenty of fluids, and try over-the-counter remedies. Consult a doctor if symptoms worsen."]
+  }
+]

@@ -1,0 +1,32 @@
+{
+    "Flu": {
+        "symptoms": ["Fever", "Cough", "Fatigue", "Body Aches"],
+        "causes": "Influenza virus infection affecting the respiratory system.",
+        "actions": "Rest, hydration, and antiviral medications if prescribed by a doctor."
+    },
+    "COVID-19": {
+        "symptoms": ["Fever", "Dry Cough", "Loss of Taste/Smell", "Shortness of Breath"],
+        "causes": "Infection with the SARS-CoV-2 virus.",
+        "actions": "Self-isolate, monitor oxygen levels, and seek medical help if breathing becomes difficult."
+    },
+    "Viral Infection": {
+        "symptoms": ["Fever", "Sore Throat", "Fatigue", "Runny Nose"],
+        "causes": "General viral pathogens affecting various body systems.",
+        "actions": "Symptomatic treatment, rest, and fluid intake."
+    },
+    "Migraine": {
+        "symptoms": ["Severe Headache", "Nausea", "Sensitivity to Light", "Dizziness"],
+        "causes": "Neurological triggers, stress, or hormonal changes.",
+        "actions": "Rest in a dark room, hydration, and over-the-counter pain relief."
+    },
+    "Heart Issue": {
+        "symptoms": ["Chest Pain", "Shortness of Breath", "Palpitations", "Dizziness"],
+        "causes": "Cardiovascular strain or underlying heart disease.",
+        "actions": "Seek emergency medical attention immediately. Do not delay."
+    },
+    "Healthy": {
+        "symptoms": ["None"],
+        "causes": "No active disease detected based on provided symptoms.",
+        "actions": "Continue maintaining a balanced diet and regular exercise."
+    }
+}
