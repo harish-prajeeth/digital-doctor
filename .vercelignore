@@ -1,0 +1,19 @@
+# Prevent Vercel from uploading local virtual environments and build artifacts
+venv/
+venv
+.venv/
+.venv
+AI-models/venv/
+AI-models/.venv/
+
+node_modules/
+**/node_modules/
+
+__pycache__/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+.git/
+frontend/.env*
+backend/.env*
