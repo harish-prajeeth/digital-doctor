@@ -8,7 +8,8 @@ exports.predictDisease = async (req, res) => {
     const { symptoms, userId } = req.body;
     
     // Call Python AI Service
-    const aiUrl = process.env.PYTHON_SERVICE_URL || 'http://localhost:8000';
+    const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}/ai-service` : 'http://localhost:8000';
+    const aiUrl = process.env.PYTHON_SERVICE_URL || baseUrl;
     const response = await fetch(`${aiUrl}/predict-disease`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

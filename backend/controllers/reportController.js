@@ -9,7 +9,8 @@ exports.analyzeReport = async (req, res) => {
     const { userId, fileData, fileName } = req.body;
     
     // Call Python AI
-    const aiUrl = process.env.PYTHON_SERVICE_URL || 'http://localhost:8000';
+    const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}/ai-service` : 'http://localhost:8000';
+    const aiUrl = process.env.PYTHON_SERVICE_URL || baseUrl;
     const aiRes = await fetch(`${aiUrl}/analyze-report`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

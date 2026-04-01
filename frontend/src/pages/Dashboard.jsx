@@ -40,14 +40,14 @@ const Dashboard = () => {
 
     const fetchHistory = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/history/${user.id}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL || '/api'}/history/${user.id}`);
         if(res.ok) {
             const data = await res.json();
             setHistory(data);
         }
         
         // Fetch AI Metrics
-        const metricsRes = await fetch('http://localhost:8000/metrics');
+        const metricsRes = await fetch(`${import.meta.env.VITE_AI_URL || '/ai-service'}/metrics`);
         if(metricsRes.ok) {
             const mData = await metricsRes.json();
             setMetrics(mData);

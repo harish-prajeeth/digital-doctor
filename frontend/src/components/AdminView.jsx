@@ -17,7 +17,7 @@ const AdminView = () => {
         api.get('/admin/users')
       ]);
 
-      const mRes = await fetch('http://localhost:8000/metrics').catch(() => ({ ok: false }));
+      const mRes = await fetch(`${import.meta.env.VITE_AI_URL || '/ai-service'}/metrics`).catch(() => ({ ok: false }));
       const aStatus = mRes.ok ? 'operational' : 'offline';
 
       setHealth({ backend: 'operational', ai: aStatus });

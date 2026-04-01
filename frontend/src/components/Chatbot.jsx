@@ -22,7 +22,7 @@ export default function Chatbot({ onClose }) {
     const loadHistory = async () => {
         if (!user) return;
         try {
-            const res = await fetch(`http://localhost:5000/api/chat/history/${user.id}`);
+            const res = await fetch(`${import.meta.env.VITE_API_URL || '/api'}/chat/history/${user.id}`);
             if (res.ok) {
                 const data = await res.json();
                 if (data.length > 0) {
@@ -55,7 +55,7 @@ export default function Chatbot({ onClose }) {
 
     try {
       // 1. Save User Message to Backend
-      await fetch('http://localhost:5000/api/chat', {
+      await fetch(`${import.meta.env.VITE_API_URL || '/api'}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, sender: 'user', text: userMsg })
@@ -73,7 +73,7 @@ export default function Chatbot({ onClose }) {
           setMessages(prev => [...prev, botMsg]);
 
           // 4. Save Bot Message
-          await fetch('http://localhost:5000/api/chat', {
+          await fetch(`${import.meta.env.VITE_API_URL || '/api'}/chat`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId: user.id, sender: 'bot', text: data.response })
@@ -105,7 +105,7 @@ export default function Chatbot({ onClose }) {
     setLoading(true);
 
     try {
-      await fetch('http://localhost:5000/api/chat', {
+      await fetch(`${import.meta.env.VITE_API_URL || '/api'}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, sender: 'user', text: userMsg })
@@ -117,7 +117,7 @@ export default function Chatbot({ onClose }) {
           setTyping(false);
           const botMsg = { sender: 'bot', text: data.response, role: 'bot' };
           setMessages(prev => [...prev, botMsg]);
-          await fetch('http://localhost:5000/api/chat', {
+          await fetch(`${import.meta.env.VITE_API_URL || '/api'}/chat`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId: user.id, sender: 'bot', text: data.response })

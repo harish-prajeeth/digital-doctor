@@ -9,7 +9,7 @@ const DoctorView = () => {
   const [consultationOpen, setConsultationOpen] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/doctor/patients')
+    fetch(`${import.meta.env.VITE_API_URL || '/api'}/doctor/patients`)
       .then(res => res.json())
       .then(data => setPatients(data))
       .catch(e => console.error(e));
@@ -18,7 +18,7 @@ const DoctorView = () => {
   const openPatientProfile = async (p) => {
     setSelectedPatient(p);
     try {
-      const res = await fetch(`http://localhost:5000/api/doctor/patient/${p.id}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL || '/api'}/doctor/patient/${p.id}`);
       if (res.ok) setPatientDetail(await res.json());
     } catch (e) {
       console.error(e);

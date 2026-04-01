@@ -13,7 +13,7 @@ const Auth = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const url = `http://localhost:5000/api/auth/${isLogin ? 'login' : 'register'}`;
+      const url = `${import.meta.env.VITE_API_URL || '/api'}/auth/${isLogin ? 'login' : 'register'}`;
       const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

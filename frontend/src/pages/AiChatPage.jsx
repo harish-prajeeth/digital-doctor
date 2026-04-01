@@ -18,7 +18,7 @@ const AiChatPage = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:8000/chat', {
+      const res = await fetch(`${import.meta.env.VITE_AI_URL || '/ai-service'}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMsg })
@@ -67,7 +67,7 @@ const AiChatPage = () => {
     formData.append('audio', blob, 'recording.wav');
 
     try {
-      const res = await fetch('http://localhost:8000/voice-chat', {
+      const res = await fetch(`${import.meta.env.VITE_AI_URL || '/ai-service'}/voice-chat`, {
         method: 'POST',
         body: formData
       });
