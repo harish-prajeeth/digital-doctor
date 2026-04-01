@@ -1,13 +1,10 @@
-# Python dependencies for AI Medical Assistant on Vercel
+# Lightweight dependencies for AI Medical Assistant on Vercel
 fastapi
 uvicorn
 pydantic
 PyPDF2
-transformers
-scikit-learn
-torch
 python-multipart
 SpeechRecognition
-# Note: pyttsx3 is not compatible with Vercel's serverless environment
-# as it requires an OS-level text-to-speech engine.
-# Consider using an external TTS API for production.
+# Note: Heavy libraries like torch, transformers, and scikit-learn have been 
+# removed to fit within Vercel's deployment size limits.
+# Voice feature (pyttsx3) is disabled in serverless.
